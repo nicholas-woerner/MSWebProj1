@@ -1,0 +1,25 @@
+﻿@using MSwebPROJ1.Models
+@model List<TaskModel>
+
+    <h2>My Task List</h2>
+<table class="table">
+        <thread>
+            <tr>
+                <th>Task Name</th>
+                <th>Task Description</th>
+                <th>Task Due Date</th>
+                <th>Have you completed the task?</th>
+            </tr>
+        </thread>
+    <tbody>
+        @foreach (var task in Model)
+        {
+        <tr>
+            <td>@task.Name</td>
+            <td>@task.Description</td>
+            <td>@task.DueDate.ToShortDateString()</td> <!--Converts date to a string-->
+            <td>@task.IsCompleted ? "Yes" : "No")</td>
+        </tr>
+        }
+    </tbody>
+</table>s

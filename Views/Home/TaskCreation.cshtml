@@ -1,0 +1,21 @@
+﻿@model MSwebPROJ1.Models.TaskModel
+
+<h3>Create Task</h3>
+<!--Form that allows you to create a task and add the necissary information for the task.-->
+<form asp-action-"Create">
+    <div class="form-group"><!--This div is to input the task name-->
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group"> <!--This div is to input the due date-->
+        <label asp-for="DueDate"></label>
+        <input asp-for="DueDate" class="form-control" />
+        <span asp-validation-for="DueDate" class="text-danger"></span>
+    </div>
+    <div class="form-group"> <!--This div is a checkbox for if it's completed or not-->
+        <label asp-for="IsCompleted"></label>
+        <input asp-for="DueDate" type="checkbox" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button> <!--Button to submit information and create the task-->
+</form>
